@@ -186,7 +186,7 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 const FormContainer = styled.div`
-  background-color: #e2cb16;
+  background-color: #b8eb38;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -208,7 +208,7 @@ const FormInput = styled.input`
 
 const FormButton = styled.button`
   padding: 10px 20px;
-  background-color: #dc4d4d;
+  background-color: #2312df;
   color: white;
   border: none;
   border-radius: 5px;

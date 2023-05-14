@@ -25,7 +25,7 @@ const FormInput = styled.input`
 
 const FormButton = styled.button`
   padding: 10px 20px;
-  background-color: #dc4d4d;
+  background-color: #130ce1;
   color: white;
   border: none;
   border-radius: 5px;
