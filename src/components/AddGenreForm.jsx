@@ -75,7 +75,7 @@ const AddGenreForm = () => {
 
   return (
     <FormContainer>
-      <h3>Add Genre</h3>
+      <h3>Create New Genre</h3>
       <form onSubmit={handleSubmit}>
         <FormLabel>Title:</FormLabel>
         <FormInput

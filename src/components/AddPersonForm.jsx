@@ -67,7 +67,7 @@ const AddPersonForm = () => {
 
   return (
     <FormContainer>
-      <h3>Add Person</h3>
+      <h3>Create New Person</h3>
       <form onSubmit={handleSubmit}>
         <FormLabel>Name:</FormLabel>
         <FormInput
