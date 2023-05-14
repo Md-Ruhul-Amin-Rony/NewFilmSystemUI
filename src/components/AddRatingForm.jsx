@@ -42,6 +42,7 @@ const ErrorMessage = styled.div`
   margin-bottom: 10px;
 `;
 
+// eslint-disable-next-line react/prop-types
 const AddRatingForm = ({ personId }) => {
   const [movieId, setMovieId] = useState('');
   const [rating, setRating] = useState('');

@@ -107,9 +107,11 @@ const PeopleList = () => {
         <h1>People List</h1>
         <Introduction>Click on a person to view details</Introduction>
       </Header>
+      {/* Add Person Form */}
       <AddPersonForm/>
+      {/* Add Genre Form */}
       <AddGenreForm/>
-
+  {/* People list */}
       <PeopleListContainer>
         {people.map((person) => (
           <PersonBox key={person.personId} onClick={() => handlePersonClick(person)}>
@@ -118,7 +120,7 @@ const PeopleList = () => {
           </PersonBox>
         ))}
       </PeopleListContainer>
-
+ {/* Display selected person details */}
       {selectedPerson && (
         <PersonDetailsContainer>
           <CloseButton onClick={handleCloseButtonClick}>Close</CloseButton>
@@ -138,7 +140,7 @@ const PeopleList = () => {
           <AddToNewGenreForm personId={selectedPerson.personId} />
           {/* //So that while user click to one person then that personId is activated for rest of the functions related to that person.  */}
           
-
+        {/* Display person's movies */}
           {selectedPerson.movies && (
             <div>
               <h3>Movies:</h3>
@@ -149,6 +151,7 @@ const PeopleList = () => {
               </ul>
             </div>
           )}
+          {/* Add movie form for the selected person */}
           <AddMovieForm personId={selectedPerson.personId} />
           <AddRatingForm personId={selectedPerson.personId} />
         </PersonDetailsContainer>

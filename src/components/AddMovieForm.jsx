@@ -42,6 +42,7 @@ const ErrorMessage = styled.div`
   margin-bottom: 10px;
 `;
  {/* //So that while user click to one person then that personId is activated for rest of the functions related to that person.  */}
+// eslint-disable-next-line react/prop-types
 const AddMovieForm = ({ personId }) => {
   const [genreId, setGenreId] = useState('');
   const [link, setLink] = useState('');
