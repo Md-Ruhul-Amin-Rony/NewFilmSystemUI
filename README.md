@@ -35,7 +35,7 @@ The FilmPeopleList  App is a web application that allows users to view and manag
 
 To connect the frontend app with the backend API, you need to configure the backend server. Here are the steps:
 
-1. Open the backend code in C#.
+1. Open the backend code in C#.(https://github.com/Md-Ruhul-Amin-Rony/FilmSystemAPIUsingRepositoryPattern.git)
 2. Set up the database connection and ensure it's running.
 3. Build and run the backend server.
 
