@@ -12,6 +12,8 @@ import axios from 'axios';
 import AddToNewGenreForm from './AddToNewGenre';
 import AddMovieForm from './AddMovieForm';
 import AddRatingForm from './AddRatingForm';
+import AddPersonForm from './AddPersonForm';
+import AddGenreForm from './AddGenreForm';
 
 
 const Header = styled.header`
@@ -33,7 +35,7 @@ const PeopleListContainer = styled.div`
 `;
 
 const PersonBox = styled.div`
-  background-color: #df3b3b;
+  background-color: #e41f1f;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -105,6 +107,8 @@ const PeopleList = () => {
         <h1>People List</h1>
         <Introduction>Click on a person to view details</Introduction>
       </Header>
+      <AddPersonForm/>
+      <AddGenreForm/>
 
       <PeopleListContainer>
         {people.map((person) => (
@@ -125,7 +129,7 @@ const PeopleList = () => {
               <h3>Genres:</h3>
               <ul>
                 {selectedPerson.genres.map((genre) => (
-                  <li key={`${selectedPerson.personId}-${genre.id}`}>{genre.title}</li>
+                  <li key={`${selectedPerson.personId}-${genre.id}`}>{genre.id}.{genre.title}</li>
                 ))}
               </ul>
             </div>
