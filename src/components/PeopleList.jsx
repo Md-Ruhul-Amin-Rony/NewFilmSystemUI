@@ -146,7 +146,7 @@ const PeopleList = () => {
               <h3>Movies:</h3>
               <ul>
                 {selectedPerson.movies.map((movie) => (
-                  <li key={`${selectedPerson.personId}-${movie.id}`}>{movie.link} - Rating: {movie.ratings !== null ? movie.ratings : "null"}</li>
+                  <li key={`${selectedPerson.personId}-${movie.id}`}>MovieId:{movie.id} - Link: {movie.link} - Rating: {movie.ratings !== null ? movie.ratings : "null"}</li>
                 ))}
               </ul>
             </div>
