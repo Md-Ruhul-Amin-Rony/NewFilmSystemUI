@@ -7,11 +7,9 @@ import PeopleList from './components/PeopleList';
 function App() {
   return (
     <Router>
-      <Routes>        
-        <Route exact path="/"  element={<PeopleList />} />
-        
-
-        
+      <Routes>  
+        {/* Define a route for the homepage */}      
+        <Route exact path="/"  element={<PeopleList />} /> 
       </Routes>
     </Router>
   );

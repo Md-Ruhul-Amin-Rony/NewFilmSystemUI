@@ -41,7 +41,7 @@ const ErrorMessage = styled.div`
   color: red;
   margin-bottom: 10px;
 `;
-
+ {/* //So that while user click to one person then that personId is activated for rest of the functions related to that person.  */}
 const AddMovieForm = ({ personId }) => {
   const [genreId, setGenreId] = useState('');
   const [link, setLink] = useState('');

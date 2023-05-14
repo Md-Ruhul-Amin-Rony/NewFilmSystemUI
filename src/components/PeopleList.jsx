@@ -77,15 +77,15 @@ const PeopleList = () => {
   const [selectedPerson, setSelectedPerson] = useState(null);
 
   useEffect(() => {
-    // Fetch data from the API endpoint
+    // access data from the API endpoint
     axios
       .get('https://localhost:7146/Person/GetAllPeopleDetails')
       .then((response) => {
-        // Update the state with the fetched data
+        // Update the state with the accessed data
         setPeople(response.data);
       })
       .catch((error) => {
-        console.error('Error fetching data:', error);
+        console.error('Accessing data Error:', error);
       });
   }, []);
 
@@ -136,6 +136,7 @@ const PeopleList = () => {
           )}
 
           <AddToNewGenreForm personId={selectedPerson.personId} />
+          {/* //So that while user click to one person then that personId is activated for rest of the functions related to that person.  */}
           
 
           {selectedPerson.movies && (
