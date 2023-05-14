@@ -10,6 +10,8 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 import AddToNewGenreForm from './AddToNewGenre';
+import AddMovieForm from './AddMovieForm';
+import AddRatingForm from './AddRatingForm';
 
 
 const Header = styled.header`
@@ -65,83 +67,7 @@ const CloseButton = styled.button`
   cursor: pointer;
 `;
 
-// const PeopleList = () => {
-//   const [people, setPeople] = useState([]);
-//   const [selectedPerson, setSelectedPerson] = useState(null);
 
-//   useEffect(() => {
-//     // Fetch data from the API endpoint
-//   axios
-//   .get('https://localhost:7146/Person/GetAllPeopleDetails')
-//   .then((response) => {
-//     // Update the state with the fetched data
-//     setPeople(response.data);
-//   })
-//   .catch((error) => {
-//     console.error('Error fetching data:', error);
-//   });
-// }, []);
-
-//   const handlePersonClick = (person) => {
-//     setSelectedPerson(person);
-//   };
-
-//   const handleCloseButtonClick = () => {
-//     setSelectedPerson(null);
-//   };
-
-//   if (people.length === 0) {
-//     return <div>Loading...</div>;
-//   }
-
-//   return (
-//     <div>
-//       <Header>
-//         <h1>People List</h1>
-//         <Introduction>Click on a person to view details</Introduction>
-//       </Header>
-      
-//       <PeopleListContainer>
-//         {people.map((person) => (
-//           <PersonBox key={person.personId} onClick={() => handlePersonClick(person)}>
-//             <PersonName>{person.name}</PersonName>
-//             <PersonEmail>{person.email}</PersonEmail>
-//           </PersonBox>
-//         ))}
-//       </PeopleListContainer>
-//       {selectedPerson && (
-//         <PersonDetailsContainer>
-//           <CloseButton onClick={handleCloseButtonClick}>Close</CloseButton> {/* Moved the CloseButton inside PersonDetailsContainer */}
-//           <h2>{selectedPerson.name}</h2>
-//           <p>{selectedPerson.email}</p>
-//           {selectedPerson.genres && (
-//             <div>
-//               <h3>Genres:</h3>
-//               <ul>
-//                 {selectedPerson.genres.map((genre) => (
-//                   <li key={`${selectedPerson.PersonId}-${genre.id}`}>{genre.title}</li>
-//                 ))}
-//               </ul>
-//             </div>
-//           )}
-//           <AddToNewGenreForm/>
-//           {selectedPerson.movies && (
-//             <div>
-//               <h3>Movies:</h3>
-//               <ul>
-//                 {selectedPerson.movies.map((movie) => (
-//                   <li key={`${selectedPerson.PersonId}-${movie.id}`}>{movie.link} - Rating: {movie.ratings !==null? movie.ratings : "null"}</li>
-//                 ))}
-//               </ul>
-//             </div>
-//           )}
-//         </PersonDetailsContainer>
-//       )}
-//     </div>
-//   );
-// };
-
-// export default PeopleList;
 
 
 const PeopleList = () => {
@@ -206,6 +132,7 @@ const PeopleList = () => {
           )}
 
           <AddToNewGenreForm personId={selectedPerson.personId} />
+          
 
           {selectedPerson.movies && (
             <div>
@@ -217,6 +144,8 @@ const PeopleList = () => {
               </ul>
             </div>
           )}
+          <AddMovieForm personId={selectedPerson.personId} />
+          <AddRatingForm personId={selectedPerson.personId} />
         </PersonDetailsContainer>
       )}
     </div>
